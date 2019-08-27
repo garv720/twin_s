@@ -1,0 +1,19 @@
+<div style="align-items: center;">
+	<h2 id="id1">TODO'S Index</h2>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+		  type: "GET", 
+		  url: "http://localhost:3000/todos.json",
+		  // data: mydata,
+		  success: function(data, textStatus, jqXHR){
+		  	alert('Found Data!!!');
+		  },
+		  error: function(jqXHR, textStatus, errorThrown){
+		  	alert('No Data Found!!!');
+		  }
+		});
+	});
+</script>
